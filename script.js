@@ -13,4 +13,3 @@ categories.forEach(category => {
         this.classList.add('active');
     });
 });
-
