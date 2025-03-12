@@ -26,7 +26,6 @@ function showSlides() {
     slides[slideIndex - 1].style.display = "block";
     setTimeout(showSlides, 3000); // Auto change every 3 seconds
 }
-
 function changeSlide(n) {
     slideIndex += n - 1;
     if (slideIndex < 0) slideIndex = slides.length - 1;
