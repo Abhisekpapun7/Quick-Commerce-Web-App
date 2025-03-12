@@ -202,6 +202,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 0;
+  width: 100px;
 }
 
 .category img {
@@ -210,15 +212,17 @@
 
 @media (max-width: 480px) {
   .categories {
-    gap: 5px;
+    gap: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 70px;
+    padding-left: 290px;
+   
   }
   .category {
     padding: 5px 10px;
     font-size: 12px;
+    width: 80px;
   }
   .category img {
     width: 20px;
