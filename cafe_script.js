@@ -19,7 +19,7 @@ setInterval(changeLogo, 1500);
 changeLogo(); // Initial load
 
 // script for the cafe section
-const categories = {
+const categories1 = {
     bestseller: [
         { name: "Burger", price: "₹89", actprc: "₹149", img: "cafe_sec_assets/burger.jpg", quan: "1 Pieces" },
         { name: "Pizza", price: "₹119", actprc: "₹199",img: "cafe_sec_assets/pizza.jpg", quan: "4 Pieces" },
@@ -60,7 +60,7 @@ function displayCategory(category) {
     const cardsContainer = document.getElementById("cards-container");
     cardsContainer.innerHTML = "";
     
-    categories[category].forEach(item => {
+    categories1[category].forEach(item => {
         const card = document.createElement("div");
         card.classList.add("card");
         card.innerHTML = `

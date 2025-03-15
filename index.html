@@ -121,11 +121,26 @@
     
 <!-- cafe section -->
 
-<section class="cafe">
+<scetion class="cafe-section">
+    <div class="asking-text">
+        <h1>What's on your mind?</h1>
+        <img id="cafe-logo" class="cafe-logo" src="cafe1.png" alt="Cafe Item">
+    </div>
     
-
-</section>
+    <div class="scroll-container">
+        <button class="category-btn first-category-btn" data-category="bestseller">🌟 Bestseller</button>
+        <button class="category-btn" data-category="breakfast">🍔 Breakfast</button>
+        <button class="category-btn" data-category="chai-coffee">☕ Chai/Coffee</button>
+        <button class="category-btn" data-category="desserts">🍨 Desserts</button>
+        <button class="category-btn" data-category="snacks">🍿 Snacks</button>
+    </div>
+    
+    <div class="cards-container" id="cards-container">
+        <!-- Cards will be displayed here -->
+    </div>
+</scetion>
 
     <script src="script.js"></script>
+    <script src="cafe_script.js"></script>
 </body>
 </html>
