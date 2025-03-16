@@ -44,20 +44,28 @@ document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll("section");
 
     function showSection(sectionClass) {
+        // Hide all sections first
         sections.forEach((section) => {
-            section.style.display = "none"; // Hide all sections
+            section.style.display = "none";
         });
 
-        document.querySelector("." + sectionClass).style.display = "block"; // Show the selected section
+        // Show the selected section only
+        const selectedSection = document.querySelector("." + sectionClass);
+        if (selectedSection) {
+            selectedSection.style.display = "block";
+        }
     }
 
-    // Default: Show 'all-section' on page load
-    showSection("all-section");
-
+    // Set correct data attributes in HTML for category buttons
     categories.forEach((category) => {
         category.addEventListener("click", function () {
-            const sectionClass = this.getAttribute("onclick").split("'")[1];
-            showSection(sectionClass);
+            const sectionClass = this.getAttribute("data-section");
+            if (sectionClass) {
+                showSection(sectionClass);
+            }
         });
     });
+
+    // Ensure only 'all-section' is visible by default
+    showSection("all-section");
 });
