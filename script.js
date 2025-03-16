@@ -36,3 +36,28 @@ function changeSlide(n) {
 
 // Initialize slideshow
 showSlides();
+
+// on-click property code for all category bar
+
+document.addEventListener("DOMContentLoaded", function () {
+    const categories = document.querySelectorAll(".category");
+    const sections = document.querySelectorAll("section");
+
+    function showSection(sectionClass) {
+        sections.forEach((section) => {
+            section.style.display = "none"; // Hide all sections
+        });
+
+        document.querySelector("." + sectionClass).style.display = "block"; // Show the selected section
+    }
+
+    // Default: Show 'all-section' on page load
+    showSection("all-section");
+
+    categories.forEach((category) => {
+        category.addEventListener("click", function () {
+            const sectionClass = this.getAttribute("onclick").split("'")[1];
+            showSection(sectionClass);
+        });
+    });
+});

@@ -152,6 +152,14 @@
 
 /* css for categories bar */
 
+.all-section {
+  display: block;
+}
+
+.cafe-section {
+  display: none;
+}
+
 .category-bar {
   overflow-x: auto;
   white-space: nowrap;
