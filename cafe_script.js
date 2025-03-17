@@ -1,23 +1,3 @@
-const cafeItems = [
-    "☕",  // Coffee
-    "🍵",  // Tea
-    "🥐",  // Croissant
-    "🍩",  // Donut
-    "🍰",  // Cake
-    "🥤"   // Cold Drink
-];
-
-let index = 0;
-const cafeLogo = document.getElementById("cafe-logo");
-
-function changeLogo() {
-    cafeLogo.src = `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50"><text x="0" y="40" font-size="40">${cafeItems[index]}</text></svg>`;
-    index = (index + 1) % cafeItems.length;
-}
-
-setInterval(changeLogo, 1500);
-changeLogo(); // Initial load
-
 // script for the cafe section
 const categories1 = {
     bestseller: [
