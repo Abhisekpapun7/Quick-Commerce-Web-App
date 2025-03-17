@@ -14,7 +14,11 @@ header {
   z-index: 1000;
 }
 
-
+.category-bar {
+  position: sticky;
+  top: 71px;
+  z-index: 999;
+}
 
 .nav-bar {
     display: flex;
